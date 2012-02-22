@@ -1,0 +1,40 @@
+This is the BNOTIONS Validajtor (not a misspelling).
+
+To begin, please follow the steps below:
+
+1. Add the following to your custom javascript file:
+$('form').validajte({
+	'labelpos' : 'absolute',
+	'ajax' : false
+});
+
+Replacing -form- with the id of your form.
+
+2. If you want a form element to be required then add this attribute to it "data-validation='{"required":true}"
+
+3. You can continute to add to your validation by specifying the type as well "data-validation='{"required":true, "type":"email"}"
+
+Types are defined by jquery.validajtor.js. The types currently supported are:
+
+- Email
+- Minimum length and mix of characters password
+- Date
+- Zip/Postal Code
+- Matching inputs
+- Custom word validation
+
+4. To add two elements that need to match, please refer to the following code: 
+<input type="email" name="email" id="param_email" data-validation='{"required":true, "type":"email", "match":"param_email2"}' required="required">
+
+<input type="email" name="email2" id="param_email2" data-validation='{"required":true, "type":"email"}' required="required" >
+
+5. To add in a custom error message: 
+
+data-validation='{"required":true, "message":"Please enter your first name"}'
+
+6. Custom word validation
+
+data-validation='{"required":true, "regexp":"(yellow|green)", "message":"Prove you are human" }'
+
+7. Have a great time.
+
